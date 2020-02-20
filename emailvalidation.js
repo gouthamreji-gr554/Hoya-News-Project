@@ -1,9 +1,17 @@
-function validateEmail(sEmail) {
-    var reEmail = /^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!\.)){0,61}[a-zA-Z0-9]?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!$)){0,61}[a-zA-Z0-9]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/;
-  
-    if(!sEmail.match(reEmail)) {
-      alert("Please enter a valid Email Address");
-      return false;
+function validate() {
+    var Email = document.getElementById("Email").value;
+    var patcheck = new RegExp("^[a-z0-9]");
+    if (Email.indexOf("@") > -1) {
+        document.getElementById("div2").innerHTML = "";
+    } else {
+        document.getElementById("div2").innerHTML = "Enter the correct email address";
+        document.getElementById("div2").style.color = "Red";
+
     }
-    return true;
-  }
+}
+
+$(function() {
+    $("#t-btn").click(function() {
+        window.location.href = "News.html";
+    });
+});
