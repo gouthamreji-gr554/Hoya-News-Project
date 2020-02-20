@@ -12,6 +12,6 @@ function validate() {
 
 $(function() {
     $("#t-btn").click(function() {
-        window.location.href = "News.html";
+        window.location.href = "https://ac1956.github.io/Hoya-News-Project/News.html";
     });
 });
