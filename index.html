@@ -10,9 +10,15 @@
     <link rel="stylesheet" href="stylelogin.css">
     <link rel="stylesheet" href="Stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script SRC="emailvalidation.js"></script>
-    <script SRC="js/sheet.js"></script>
+    
     <title>Login</title>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script SRC="emailvalidation.js"></script>
+    <script src="js/sheet.js"></script>
+    <script>
+    // 1. Load the JavaScript client library.
+    gapi.load('client', readData);
+    </script>
 </head>
 
 <body>
@@ -38,7 +44,7 @@
       </label> -->
         <div class="clearfix">
             <!-- <button type="button" class="cancelbtn">Cancel</button> -->
-            <button id="t-btn" class="signupbtn">Sign In</button>
+            <button id="t-btn-login" class="signupbtn">Sign In</button>
         </div>
     </div>
 </body>
