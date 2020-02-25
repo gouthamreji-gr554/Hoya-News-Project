@@ -11,7 +11,7 @@ function validate() {
     }
 }
 function readData() {
-    // 2. Initialize the JavaScript client library.
+    // 2. Initialize the the JavaScript client library.
     var CLIENT_ID = '928107325059-qlc78qdmru2qovlutpilhkfe7lh8t6ne.apps.googleusercontent.com';
     var API_KEY = 'AIzaSyBirKcTHzH4zciDX3tKw6qz-bYRmBCtuRk';
     var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
