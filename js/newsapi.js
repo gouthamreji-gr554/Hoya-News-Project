@@ -11,7 +11,8 @@
                         $("#news-container").append("<div class=\"col current\"> <img id=\"mainimage\" class=\"img-fluid img-thumbnail\" src=" + news.urlToImage + " style=\"width: 100%; height: 40%;\" onerror=\"standby()\">" +
                             "<div class=\"spacing\"> <h4>" + news.title + "</h4>" +
                             "<p class=\"font1 \">" + news.source.name + "</p>" +
-                            "<p class=\"font2 \">" + news.description + "</p> </div></div>");
+                            "<p class=\"font2 \">" + news.description + "</p>" +
+                            "<p class=\"font1 \"><a href=\"" + news.url + "\" target=\"_blank\">More</a></p></div></div>");
                     });
                 } else {
                     $("#news-container").append("<h3>No News Found</h3>");
@@ -32,7 +33,8 @@
                         $("#news-container").append("<div class=\"col current\"> <img id=\"mainimage\" class=\"img-fluid img-thumbnail\" src=" + news.urlToImage + " style=\"width: 100%; height: 40%;\" onerror=\"standby()\">" +
                             "<div class=\"spacing\"> <h4>" + news.title + "</h4>" +
                             "<p class=\"font1 \">" + news.source.name + "</p>" +
-                            "<p class=\"font2 \">" + news.description + "</p> </div></div>");
+                            "<p class=\"font2 \">" + news.description + "</p>" +
+                            "<p class=\"font1 \"><a href=\"" + news.url + "\" target=\"_blank\">More</a></p></div></div>");
                     });
                 } else {
                     $("#news-container").append("<h3>No News Found</h3>");
@@ -53,7 +55,8 @@
                         $("#news-container").append("<div class=\"col current\"> <img id=\"mainimage\" class=\"img-fluid img-thumbnail\" src=" + news.urlToImage + " style=\"width: 100%; height: 40%;\" onerror=\"standby()\">" +
                             "<div class=\"spacing\"> <h4>" + news.title + "</h4>" +
                             "<p class=\"font1 \">" + news.source.name + "</p>" +
-                            "<p class=\"font2 \">" + news.description + "</p> </div></div>");
+                            "<p class=\"font2 \">" + news.description + "</p>" +
+                            "<p class=\"font1 \"><a href=\"" + news.url + "\" target=\"_blank\">More</a></p></div></div>");
                     });
                 } else {
                     $("#news-container").append("<h3>No News Found</h3>");

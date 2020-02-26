@@ -79,7 +79,7 @@ $(function() {
             document.getElementById("div2").style.color = "Red";
         } else {
             if(validateUser($("#t-email").val(), $("#t-pass").val())){
-                window.location.href = "https://ac1956.github.io/Hoya-News-Project/News.html";
+                window.location.href = "http://localhost:8888/News.html";
             } else {
                 alert('Invalid Email Id or Password');
             }
