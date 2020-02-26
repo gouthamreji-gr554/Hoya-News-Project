@@ -17,15 +17,15 @@ function readData() {
     var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
     var SCOPES = "https://www.googleapis.com/auth/spreadsheets";
     gapi.client.init({
-      apiKey: API_KEY,
-      // clientId: CLIENT_ID,
-      discoveryDocs: DISCOVERY_DOCS,
-      scope: SCOPES
-    }).then(function() {
-      var spreadsheetId = '1A_7XC1v-dBgWbQTLiYZkLS1FqCihCio0arqjyTUdJ8k';
-      var range = 'Sheet1!1:2';
-      console.log(gapi.client)
-      gapi.client.sheets.spreadsheets.values.get({
+        apiKey: API_KEY,
+        // clientId: CLIENT_ID,
+        discoveryDocs: DISCOVERY_DOCS,
+        scope: SCOPES
+    }).then(function () {
+        var spreadsheetId = '1A_7XC1v-dBgWbQTLiYZkLS1FqCihCio0arqjyTUdJ8k';
+        var range = 'Sheet1!1:2';
+        console.log(gapi.client)
+        gapi.client.sheets.spreadsheets.values.get({
             spreadsheetId: spreadsheetId,
             range: range
         }).then((response) => {
@@ -45,63 +45,63 @@ function writeData(email, pass) {
     var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
     var SCOPES = "https://www.googleapis.com/auth/spreadsheets";
     gapi.client.init({
-      apiKey: API_KEY,
-    //   clientId: CLIENT_ID,
-      discoveryDocs: DISCOVERY_DOCS,
-      scope: SCOPES
-    }).then(function() {
-      var spreadsheetId = '1A_7XC1v-dBgWbQTLiYZkLS1FqCihCio0arqjyTUdJ8k';
-      var range = 'Sheet1';
-      console.log(gapi.client)
-      var values = [
-        [email,pass]
-      ];
-      var body = {
-        values: values
-      };
-      gapi.client.sheets.spreadsheets.values.append({
-         spreadsheetId: spreadsheetId,
-         range: range,
-         valueInputOption: 'RAW',
-        //  insertDataOption: 'INSERT_ROWS',
-         resource: body
-      }).then((response) => {
-        var result = response.result;
-        console.log(`${result.updates.updatedCells} cells appended.`)
-      });
+        apiKey: API_KEY,
+        //   clientId: CLIENT_ID,
+        discoveryDocs: DISCOVERY_DOCS,
+        scope: SCOPES
+    }).then(function () {
+        var spreadsheetId = '1A_7XC1v-dBgWbQTLiYZkLS1FqCihCio0arqjyTUdJ8k';
+        var range = 'Sheet1';
+        console.log(gapi.client)
+        var values = [
+            [email, pass]
+        ];
+        var body = {
+            values: values
+        };
+        gapi.client.sheets.spreadsheets.values.append({
+            spreadsheetId: spreadsheetId,
+            range: range,
+            valueInputOption: 'RAW',
+            //  insertDataOption: 'INSERT_ROWS',
+            resource: body
+        }).then((response) => {
+            var result = response.result;
+            console.log(`${result.updates.updatedCells} cells appended.`)
+        });
     });
 };
 
-$(function() {
-    $("#t-btn-login").click(function() {
+$(function () {
+    $("#t-btn-login").click(function () {
         if (!$("#t-email").val() || !$("#t-pass").val()) {
             document.getElementById("div2").innerHTML = "Enter email and password";
             document.getElementById("div2").style.color = "Red";
         } else {
-            if(validateUser($("#t-email").val(), $("#t-pass").val())){
+            if (validateUser($("#t-email").val(), $("#t-pass").val())) {
                 window.location.href = "News.html";
             } else {
                 alert('Invalid Email Id or Password');
             }
         }
     });
-    $("#t-btn-signup").click(function() {
-        writeData('gou@gou.com','pass');
+    $("#t-btn-signup").click(function () {
+        writeData('gou@gou.com', 'pass');
     });
 });
 
-function validateUser(email, pass){
+function validateUser(email, pass) {
     var flag = 0;
-    if(result.values) {
-        $.each(result.values, function(index, record) {
-            if(index !=0) {
-                if(record[0] == email && record[1] == pass) {
+    if (result.values) {
+        $.each(result.values, function (index, record) {
+            if (index != 0) {
+                if (record[0] == email && record[1] == pass) {
                     flag = 1;
                 }
             }
         });
     }
-    if(flag == 1) {
+    if (flag == 1) {
         return true;
     } else {
         return false;
