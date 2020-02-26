@@ -67,10 +67,6 @@ body {
     float: right;
 }
 
-.container {
-    display: grid | inline-grid;
-}
-
 
 .footer {
     left: 0;

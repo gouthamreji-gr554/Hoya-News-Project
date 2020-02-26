@@ -53,10 +53,14 @@ button:hover {
     float: left;
     width: 50%;
 }
-
+/* @media (max-width: 1000px) {
+    .container {
+        padding: 10% 25% 2% 25%;
+    }
+}
 .container {
     padding: 10% 25% 2% 25%;
-}
+} */
 
 .modal {
     display: none;
