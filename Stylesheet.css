@@ -58,7 +58,6 @@ body {
 
 .navbar a.active,
 .navbar2 a.active {
-    background-color: rgb(158, 165, 172);
     color: white;
 }
 
@@ -198,7 +197,7 @@ h2 {
 
 @media screen and (max-width: 1020px) {
     .navbar.responsive {
-        position: relative;
+        position: fixed;
     }
     .navbar.responsive .icon {
         position: absolute;
