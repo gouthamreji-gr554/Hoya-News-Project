@@ -5,15 +5,24 @@
 
         function scrollFunction() {
             if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-                document.getElementById("navbar").style.padding = "10px 10px";
+                document.getElementById("myTopnav").style.padding = "10px 10px";
                 // document.getElementById("navbar").style.opacity = 0.6;
                 document.getElementById("logo").style.fontSize = "20px";
             } else {
-                document.getElementById("navbar").style.padding = "30px 10px";
+                document.getElementById("myTopnav").style.padding = "30px 10px";
                 document.getElementById("logo").style.fontSize = "35px";
             }
         }
 
         function standby() {
             document.getElementById('mainimage').src = 'file:///Users/ashwin/Downloads/Masthead_600px.png'
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
         }
