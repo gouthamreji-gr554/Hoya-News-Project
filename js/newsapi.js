@@ -23,6 +23,7 @@
 
     function searchNews(query) {
         $("#news-container").empty();
+        $("#toggle-ham").click();
         console.log(query)
         $.get('https://newsapi.org/v2/everything?q=' + query + '&from=2020-02-19&sortBy=popularity&apiKey=8bc0f6181d85423dbf8dc3a877fb49bf', // url
             function(data, textStatus, jqXHR) { // success callback
@@ -44,6 +45,9 @@
     }
 
     function categoryNews(category) {
+        console.log('calling')
+            $("#toggle-ham").click();
+            console.log('called')
         $("#news-container").empty();
         console.log(category)
         $.get('https://newsapi.org/v2/top-headlines?country=us&category=' + category + '&apiKey=8bc0f6181d85423dbf8dc3a877fb49bf', // url
