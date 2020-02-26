@@ -15,7 +15,7 @@
         }
 
         function standby() {
-            document.getElementById('mainimage').src = 'file:///Users/ashwin/Downloads/Masthead_600px.png'
+            document.getElementById('mainimage').src = 'https://i.ibb.co/FHxspT6/noimage.jpg'
         }
 
         function myFunction() {
