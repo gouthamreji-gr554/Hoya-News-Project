@@ -23,7 +23,7 @@ function readData() {
         scope: SCOPES
     }).then(function () {
         var spreadsheetId = '1A_7XC1v-dBgWbQTLiYZkLS1FqCihCio0arqjyTUdJ8k';
-        var range = 'Sheet1!1:2';
+        var range = 'Sheet1!3:7';
         console.log(gapi.client)
         gapi.client.sheets.spreadsheets.values.get({
             spreadsheetId: spreadsheetId,
